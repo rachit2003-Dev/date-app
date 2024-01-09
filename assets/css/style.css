@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Avenir Next LT W01 Bold", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+:root {
+  --color-primary: rgb(255, 172, 220);
+  --color-secondary: rgb(255, 145, 209);
+  --color-tertiary: rgb(255, 103, 191);
+  --color-quaternary: rgb(255, 69, 177);
+  --color-quinary: rgb(255, 31, 161);
+}
+
+body {
+  min-height: 100vh;
+  font-size: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: rgba(255, 226, 244, 0.911);
+}
+
+.content {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.text_shadows {
+  text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
+    9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+  font-family: "Bungee", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: calc(2rem + 2vw);
+  text-align: center;
+  margin: 0;
+  color: var(--color-primary);
+  color: transparent;
+  background-color: rgba(255, 164, 220, 0.911);
+  background-clip: text;
+  animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
+  letter-spacing: 0.4rem;
+}
+
+@keyframes shadows {
+  0% {
+    text-shadow: none;
+  }
+  10% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  20% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary);
+  }
+  30% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  40% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  50% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  60% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  70% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  80% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary);
+  }
+  90% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  40% {
+    transform: translate(-12px, -12px);
+  }
+  50% {
+    transform: translate(-12px, -12px);
+  }
+  60% {
+    transform: translate(-12px, -12px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.animate-image {
+  height: 10rem;
+  width: 10rem;
+  position: relative;
+}
+
+.animate-image .change-img img {
+  height: 10rem;
+  width: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.animate-image .change-img .img-1 {
+  display: block;
+}
+.animate-image .change-img .img-2 {
+  display: none;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.button-1 {
+  background-color: transparent;
+  border: 1px solid rgba(255, 66, 177, 1);
+  box-sizing: border-box;
+  color: #ffffff;
+  font-family: "Avenir Next LT W01 Bold", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  transition: all 0.3s ease-in;
+  padding: 16px 23px;
+  position: absolute;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  z-index: 20;
+}
+
+.button-1:hover,
+.button-1:active {
+  outline: 0;
+}
+
+.button-1:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.button-1:before {
+  background-color: rgb(255, 79, 181);
+  content: "";
+  height: calc(100% + 3px);
+  position: absolute;
+  right: -7px;
+  top: -9px;
+  width: 100%;
+  z-index: -1;
+}
+
+@media (min-width: 768px) {
+  .button-1 {
+    padding: 16px 32px;
+  }
+}
+
+ .buttons .yes{
+  transform: translate(-200%, 0);
+}
+
+.buttons .no{
+  transform: translate(100%, 0);
+}
