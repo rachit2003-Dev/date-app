@@ -20,7 +20,5 @@ const getRandomNumber = (num) => {
 };
 
 function goTo() {
-  var audio = new Audio("audio/audio.mp3");
-  audio.play();
   document.location.href = 'index2.html';
 }
